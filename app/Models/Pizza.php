@@ -7,12 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pizza extends Model
 {
-    use HasFactory;
-    protected $table = 'pizzas';
+    // protected $table = 'pizzas';
 
-    protected $fillable = [
-        'name',
-        'type',
-        'base'
+    protected $casts = [
+        'toppings' => 'array'
     ];
 }
